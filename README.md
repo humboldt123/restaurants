@@ -1,16 +1,46 @@
-# React + Vite
+# Restaurant Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site for honors project; documents restaurants I went to with a friend. Might update later to include all restraunts. Check it out at [restaurants.vivime.info](https://restaurants.vivime.info)
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React, Vite and Tailwind. Leaflet for the Maps. Hosted with Github Pages
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/humboldt123/restaurants/
 
-## Expanding the ESLint configuration
+# install dependencies
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# then start development server..
+npm run dev
+
+# ...OR build for production
+npm run build
+
+```
+
+## Adding New Restaurants
+
+Edit `src/data/restaurants.js` and add a new entry:
+
+```javascript
+{
+  id: 10,
+  name: "Restaurant Name",
+  location: "City, State",
+  date: "Month Day, Year",
+  time: "12:00 PM",
+  timeOfDay: "The Afternoon",
+  address: "City, State",
+  rating: 4.5,
+  coords: { lat: 40.0000, lng: -75.0000 },
+  order: [
+    { item: "Dish Name", quantity: 1, note: "Optional note", highlight: true }
+  ],
+  notes: ["General notes about the visit"]
+}
+```
+
